@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi" class="js wf-roboto-n4-active wf-roboto-n5-active wf-dancingscript-n4-active wf-active">
   <head>
     <title>FlowerStore</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="home page-template page-template-page-blank page-template-page-blank-php page page-id-2 woocommerce-js lightbox lazy-icons nav-dropdown-has-arrow">
+    <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+    <div id="wrapper">
+      <%= render "layouts/headers/header" %>
+      <main id="main">
+        <div id="content" role="main" class="content-area">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
